@@ -75,6 +75,107 @@
             margin: auto;
             display:flex;
         }
+
+         /* responsive img grid styles */
+            .imageTextGrid * {
+            box-sizing: border-box;
+            }
+
+            .imageTextGrid {
+            /* text-align: center;  */
+            width: 100vw;
+            margin: 0;
+            margin-right: 0;
+            /* display: flex; */
+            }
+
+            .photos {
+            display: flex;
+            /* background-color: #000; */
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            align-content: stretch;
+            padding: 0;
+            max-width: 100vw;
+            }
+
+            .photos img {
+            display: block;
+            float: left;
+            flex: 0 0 auto;
+            padding: .35vw;
+            background-color: #fff;
+            }
+
+            .imageTextGrid a{
+            display: contents;
+                    
+            }
+
+            .topText{
+                padding-top:20px;
+                font-weight:600;
+                font-size:xx-large;
+                font-style: italic;
+            }
+            
+            @media screen and (min-width: 1801px) {
+            .photos img {
+                width: 25%;
+            }
+            .topText{
+                font-size:xx-large;
+            }
+            }
+
+            @media screen and (min-width: 1025px)and (max-width: 1800px) {
+            .photos img {
+                width: 33%;
+            }
+            .topText{
+                font-size:x-large;
+            }
+            }
+
+            @media screen and (min-width: 501px) and (max-width: 1024px) {
+            .photos img {
+                width: 50%;
+            }
+            .topText{
+                font-size:large;
+            }
+            }
+
+            @media screen and (min-width: 50px) and (max-width: 500px) {
+            .photos img {
+                width: 100%;
+            }
+            .topText{
+                font-size:medium;
+            }
+            }
+
+        .infoBtnContainer {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* height: 100vh; */
+
+            margin: 20px;
+        }
+
+        /* Style the button */
+        .infoBtn {
+            width: 20%;
+            background-color: rgb(145, 61, 61);
+            padding: 20px;
+            text-align: center;
+            color:white;
+            font-weight: normal;
+            font-size:xx-large
+        }
+
 	</style>
 
 </head>
@@ -170,7 +271,7 @@
     <!-- welcome bar start -->
     <div class="welcomeContainer" id="welcomeContainer">
 		<div class="left">
-            <h5 class="text-white text-uppercase mb-3 animated slideInDown">Welkom bij huisje <mark>kakelbont</mark></h5>
+            <h5 class="text-white text-uppercase mb-3 animated slideInDown" style="padding-left:20px;">Welkom bij huisje <mark>kakelbont</mark></h5>
         </div>
         <div class="right">
             <!-- <p class="fs-5 fw-medium text-white mb-4 pb-2"><mark style="background-color:rgba(0, 0, 0, .0); color:white;"><mark style="background:rgb(37, 37, 37);color:white;"> Let us build your dream house</mark></p> -->
@@ -184,14 +285,7 @@
     <!-- auto slideshow start -->
 <div class="slideDiv">
         <div class="slideContainer">
-            <div style="align-self:center; justify-self:center;" class="col-12 col-lg-8 text-center centeredText">
-                <!-- <h5 class="text-white text-uppercase mb-3 animated slideInDown">Welcome To <mark>Troos</mark></h5>
-                <h1 class="display-3 text-white animated slideInDown mb-4"><span>Recreational, Off-Grid & <br>Tiny Homes</span></h1>
-                <p class="fs-5 fw-medium text-white mb-4 pb-2"><mark style="background-color:rgba(0, 0, 0, .0); color:white;">We realise your custom dream house, from planning to final delivery</mark></p> -->
-                <a href="#projects" class="btn btn-primary animated slideInLeft" style="color:black;font-size:1.5em; background-color:rgba(238, 238, 238, 0.705)">Meer informatie &nbsp; <i class='fas fa-arrow-down'></i></a>
-
-                <!-- <a href="" class="btn btn-light py-md-3 px-md-5 animated slideInRight">Free Quote</a> -->
-            </div>
+            <div style="align-self:center; justify-self:center;" class="col-12 col-lg-8 text-center centeredText"></div>
             <div class="slideWrapper">
                 <!-- 1 -->
                 <img src="img/about page 1/huisoverzichtCropped.jpg" class="slideImg">
@@ -200,84 +294,26 @@
         </div>
     </div> <!-- end slideDiv div -->
 
-    <!-- auto slideshow end -->
-
-    <!-- Carousel Start -->
-    
-    <!-- Carousel End -->
-
-
-    <!-- Feature Start -->
-    <!-- <div class="container-xxl py-5" id="feature">
-        <div class="row">
-            <div class="col-6">
-                <div class="d-flex align-items-center">
-                    <div class="d-flex flex-shrink-0 align-items-center justify-content-center bg-white" style="width: 60px; height: 60px;">
-                        <i class="fa fa-user-check fa-2x text-primary"></i>
-                    </div>
-                    <div class="ms-4">
-                        <h5 class="mb-0">Made to design</h5>
-                        <p class="mb-2">customized for you</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-6">
-                <div class="d-flex align-items-center">
-                    <div class="d-flex flex-shrink-0 align-items-center justify-content-center bg-white" style="width: 60px; height: 60px;">
-                        <i class="fa fa-solid fa-seedling fa-2x text-primary"></i>
-                    </div>
-                    <div class="ms-4">
-                        <h5 class="mb-0">Quality Materials</h5>
-                        <p class="mb-2">& sustainable building</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-6">
-                <div class="d-flex align-items-center">
-                    <div class="d-flex flex-shrink-0 align-items-center justify-content-center bg-white" style="width: 60px; height: 60px;">
-                        <i class="fa fa-drafting-compass fa-2x text-primary"></i>
-                    </div>
-                    <div class="ms-4">
-                        <h5 class="mb-0">Efficient team</h5>
-                        <p class="mb-2">with broad experience</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-6">
-                <div class="d-flex align-items-center">
-                    <div class="d-flex flex-shrink-0 align-items-center justify-content-center bg-white" style="width: 60px; height: 60px;">
-                        <i class="fa fa-solid fa-toolbox fa-2x text-primary"></i>
-                    </div>
-                    <div class="ms-4">
-                        <h5 class="mb-0">Full project handling</h5>
-                        <p class="mb-2">from design to delivery</p>
-                    </div>
-                </div>
-                <br>
-            </div>
-        </div>
+<!-- centered button -->
+<div class="infoBtnContainer">
+    <div class="infoBtn">
+        <!-- <a href="#projects1" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block" style="display:inline;">Meer info<i class="fa fa-arrow-right ms-3"></i></a> -->
+        <a href="#projects" class="centered-button" style="color:white;">Meer informatie <i class="fa fa-arrow-right ms-3"></i></a>
+</body>
     </div>
 </div>
-</div>
-    </div> -->
-    <!-- Feature end -->
 
-    <!-- Service Start -->
-    <div class="container-xxl py-5" id="projects">
+    <!-- About Start -->
+    <div class="container-xxl py-5" id="projects1" style="width:100vw;">
         <div class="container">
-            <!-- <div class="section-title text-center">
-                </div>
-                    <h3 style="text-align: center; background-color: rgb(95, 122, 95); display:inline-block; color:white;padding-left: 1vw;padding-right:1vw;" id="projectsText">A Selection of our work</h3>
-                    <br>
-                <div id="serviceText">
-            </div> -->
-
             <div class="container-fluid bg-light overflow-hidden my-5 px-lg-0" id="about">
                 <div class="container about px-lg-0">
+    
                     <div class="row g-0 mx-lg-0">
-                        <div class="col-lg-6 ps-lg-0" style="min-height: 400px;">
+                        <div class="col-lg-6 ps-lg-0" style="min-height: 400px; ">
                             <div class="position-relative h-100">
-                                <img class="position-absolute img-fluid w-100 h-100" src="img/about page 1/overzicht2.jpg" style="object-fit: cover;" alt="">
+                                <img class="position-absolute img-fluid w-100 h-100" src="img/about page 1/overzicht2.jpg"
+                                    style="object-fit: cover;" alt="">
                             </div>
                         </div>
                         <div class="col-lg-6 about-text py-5 wow fadeIn" data-wow-delay="0.5s">
@@ -286,314 +322,324 @@
                                     <h1 class="display-5 mb-4">Het Huisje</h1>
                                 </div>
                                 <p class="mb-4 pb-2">
-                                    We noemen het huisje <b>Kakelbont</b>, vooral door de vele kleuren die je binnen tegemoet komen. Het is een mooi zomerhuisje dat door ons van wat gemakken is voorzien.<br><br> Zo zijn er heerlijke warme douches, een houtkachel, internet, kabel TV, twee fietsen en ik vergeet vast nog wel wat.<br><br> Het is zeker geschikt om in het voor- en najaar te genieten van de omgeving, het bos, het terras en –als zij er is- de zon! Er zijn twee slaapkamertjes met elk een WC en douche, eentje met een tweepersoons bed en eentje met twee eenpersoonsbedden.
+                                    We noemen het huisje <b>Kakelbont</b>, vooral door de vele kleuren die je binnen
+                                    tegemoet komen. Het is een mooi zomerhuisje dat door ons van wat gemakken is
+                                    voorzien.<br><br> Zo zijn er heerlijke warme douches, een houtkachel, internet, kabel
+                                    TV, twee fietsen en ik vergeet vast nog wel wat.<br><br> Het is zeker geschikt om in het
+                                    voor- en najaar te genieten van de omgeving, het bos, het terras en –als zij er is- de
+                                    zon! Er zijn twee slaapkamertjes met elk een WC en douche, eentje met een tweepersoons
+                                    bed en eentje met twee eenpersoonsbedden.
                                 </p>
                                 <br><br>
+                            </div>
+                        </div>
+                    </div>
+                
+                </div>
             </div>
         </div>
-    </div>
+    </div> <!-- About End -->
 
-    <!-- Service End -->
-
-    <!-- Service Start -->
-    <div class="container-xxl py-5" id="projects">
-        <div class="container">
-            <!-- <div class="section-title text-center">
-                </div>
-                    <h3 style="text-align: center; background-color: rgb(95, 122, 95); display:inline-block; color:white;padding-left: 1vw;padding-right:1vw;" id="projectsText">A Selection of our work</h3>
-                    <br>
-                <div id="serviceText">
-            </div> -->
-
-            <div class="container-fluid bg-light overflow-hidden my-5 px-lg-0" id="about">
-                <div class="container about px-lg-0">
-                    <div class="row g-0 mx-lg-0">
-
-                        <div class="col-lg-6 ps-lg-0" >
-                            <!-- style="min-height: 400px;" -->
-                            <div class="position-relative" style="min-height: 400px;">
-                                <img class="position-absolute img-fluid" src="img/about page 1/wk2.jpeg" style="object-fit: cover; padding: 5px" alt="">
-                            </div>
-                        </div>
-                        <div class="col-lg-6 ps-lg-0" >
-                            <!-- style="min-height: 400px;" -->
-                            <div class="position-relative" style="min-height: 400px;">
-                                <img class="position-absolute img-fluid" src="img/about page 1/eettafel2.jpg" style="object-fit: cover; padding: 5px" alt="">
-                            </div>
-                        </div>
-
-                        <div class="col-lg-6 ps-lg-0" >
-                            <!-- style="min-height: 400px;" -->
-                            <div class="position-relative" style="min-height: 400px;">
-                                <img class="position-absolute img-fluid" src="img/about page 1/sk13.jpg" style="object-fit: cover; padding: 5px" alt="">
-                            </div>
-                        </div>
-                        <div class="col-lg-6 ps-lg-0" >
-                            <!-- style="min-height: 400px;" -->
-                            <div class="position-relative" style="min-height: 400px;">
-                                <img class="position-absolute img-fluid" src="img/about page 1/bed.jpeg" style="object-fit: cover; padding: 5px" alt="">
-                            </div>
-                        </div>
-
-                        <div class="col-lg-6 ps-lg-0">
-                            <div class="position-relative" style="min-height: 400px;">
-                                <img class="position-absolute img-fluid" src="img/about page 1/woonkamer.jpg" style="object-fit: cover; padding: 5px" alt="">
-                            </div>
-                        </div>
-                        <div class="col-lg-6 ps-lg-0" >
-                            <div class="position-relative" style="min-height: 400px;    ">
-                                <img class="position-absolute img-fluid" src="img/about page 1/sk2.jpg" style="object-fit: cover; padding: 5px" alt="">
-                            </div>
-                        </div>
-
-                        <div class="col-lg-6 ps-lg-0" style="min-height: 400px;">
-                            <div class="position-relative" style="min-height: 400px;">
-                                <img class="position-absolute img-fluid w-100 h-100" src="img/about page 1/keuken.jpeg" style="object-fit: cover; padding: 5px" alt="">
-                            </div>
-                        </div>
-                        <div class="col-lg-6 ps-lg-0" style="min-height: 400px;">
-                            <div class="position-relative" style="min-height: 400px;">
-                                <img class="position-absolute img-fluid w-100 h-100" src="img/about page 1/bk.jpeg" style="object-fit: cover; padding: 5px" alt="">
-                            </div>
-                        </div>
-
-                    </div> 
-                </div> <!--end of container <div class="row g-0 mx-lg-0"></div> -->
-            </div> <!-- end container with id="about"  -->
+    <div id="projects"></div>
+        <span>
+            <h1 style="padding-left:10px; padding-top:15px; color: rgb(85, 1, 1);">Our Services</h1>
+        </span>
+    <!-- IMAGE GRID START -->
+    <div class="imageTextGrid">
+        <div class="photos">
             
-            <div id="aboutLink"></div>
- <!-- About Start -->
- <div class="container-fluid bg-light overflow-hidden my-5 px-lg-0" id="about">
-    <div class="container about px-lg-0">
-        <div class="row g-0 mx-lg-0">
-            <div class="col-lg-6 ps-lg-0" style="min-height: 400px;">
-                <div class="position-relative h-100">
-                    <img class="position-absolute img-fluid w-100 h-100" src="img/about page 1/bos en bevers.jpeg" style="object-fit: cover;" alt="">
-                </div>
-            </div>
-            <div class="col-lg-6 about-text py-5 wow fadeIn" data-wow-delay="0.5s">
-                <div class="p-lg-5 pe-lg-0">
-                    <div class="section-title text-start">
-                        <h1 class="display-5 mb-4">Omgeving</h1>
-                    </div>
-                    <p class="mb-4 pb-2">
-                        <b>&#8592; <em>"het Bos en de Bevers"</em></b><br> 
-                        Het huisje bevindt zich in een <b>uitgestrekt natuurgebied, omringd door groen</b> met een groot aanbod wandel- en fietsroutes.<br>  
-Hier kun je jezelf onderdompelen in de <b>rust en stilte</b>, ver weg van de drukte van het dagelijks leven.<br><br>
-Dit natuurlijke toevluchtsoord biedt een ongekende mogelijkheid om te verkennen. De mooie met bomen omzoomde routes leiden je over paden en door <b>prachtige en diverse bossen</b>. Direct na buitenkomst huisje loop je het bos in.<br><br>
-En dan zijn er <b>de bevers</b>, de verborgen bewoners van dit gebied. Met geduld en een scherp oog en natuurlijk een portie geluk kun je ze observeren terwijl ze behendig hun dammen bouwen en hun territorium bewaken.<br> De andere bewoners van het bos zijn minstens even interessant zoals <b>het edelhert, de vos, de buizerd, het wilde zwijn, het ree etc.</b> <br><br>
-In het dorp Zutendaal bevinden zich tal van goed te bereiken winkels, eetgelegenheid en ook een <b>zwembad</b>. Vlakbij staat de <b>uitkijktoren</b> en is er het <b>blotevoetenpad</b> de Lieteberg. </strong>
-                    </p>
-                </div>
-            </div>
+          <!-- <img class="thumbnailImg" src="img/about page 1/proj_thumnails/1_apeldoorn.PNG" /> -->
+          <!-- 1 plumbing -->
+          <a href="#1" class="gridImg"><img class="thumbnailImg" src="img/about page 1/wk2.jpeg" /></a>
+          <a href="#1" class="gridImg"><img class="thumbnailImg" src="img/about page 1/eettafel2.jpg" /></a>
+          <a href="#1" class="gridImg"><img class="thumbnailImg" src="img/about page 1/sk13.jpg" /></a>
+          <a href="#1" class="gridImg"><img class="thumbnailImg" src="img/about page 1/bed.jpeg" /></a>
+          <a href="#1" class="gridImg"><img class="thumbnailImg" src="img/about page 1/woonkamer.jpg" /></a>
+          <a href="#1" class="gridImg"><img class="thumbnailImg" src="img/about page 1/sk2.jpg" /></a>
+          <a href="#1" class="gridImg"><img class="thumbnailImg" src="img/about page 1/keuken.jpeg" /></a>
+          <a href="#1" class="gridImg"><img class="thumbnailImg" src="img/about page 1/bk.jpeg" /></a>
+  
         </div>
     </div>
-</div>
-<!-- About End -->
-
-    <!-- Service End -->
-
-<!-- Testimonial Start -->
-<div id="testimonialsLink"></div>
-<br><br>
-<div class="container-xxl py-5 wow fadeInUp" id="testimonials" data-wow-delay="0.1s">
-    <div class="container" style="font-size:smaller;">
-        <div class="section-title text-center">
-            <!-- <h1 class="display-5 mb-5">What Clients Say About Us</h1> -->
-        </div>
-        <div class="owl-carousel testimonial-carousel">
-            <div class="testimonial-item text-center">
-                <!-- <img class="img-fluid bg-light p-2 mx-auto mb-3" src="img/testimonial-1.jpg" style="width: 210px; height: 130px;"> -->
-                <div class="testimonial-text text-center p-4" style="background-color:rgb(238, 237, 237);">
-                    <p style="font-size:medium;">
-                        <b>"</b> Een super mooi huisje in het midden van het bos, leuk opgeknapt en een zee van rust. Mooie omgeving voor wandelingen en fietstochten. Zeker aan te bevelen! <b>"</b>                   </p>
-                    <h4 class="mb-1">- Maarten</h4>
-
-                </div>
-            </div>
-            <div class="testimonial-item text-center">
-                <!-- <img class="img-fluid bg-light p-2 mx-auto mb-3" src="img/about page 1/Hanne/hanne1.jpeg" style="width: 210px; height: 130px;"> -->
-                <div class="testimonial-text text-center p-4" style="background-color:rgb(255, 255, 255);">
-                    <p style="font-size:medium">
-                        <b>"</b> 
-                        Mooiiiiiii......
-                        <br>
-                        We genieten elke dag in ons stadje als we er zijn!
-                        <br>
-                        Schone lucht lekker eten...
-                        <b>"</b>
-                    <h5 class="mb-1">- Mieke</h5>
-
-                </div>
-            </div>
-            <div class="testimonial-item text-center">
-                <!-- <img class="img-fluid bg-light p-2 mx-auto mb-3" src="img/about page 1/Hanne/hanne1.jpeg" style="width: 210px; height: 130px;"> -->
-                <div class="testimonial-text text-center p-4" style="background-color:rgb(238, 237, 237);">
-                    <p style="font-size:medium">
-                        <b>"</b> 
-                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Labore, quia. Nam obcaecati necessitatibus unde officia quod veniam deleniti animi incidunt laboriosam voluptates suscipit exercitationem enim fugit, repellat esse libero minima.
-                        <b>"</b>
-                    <h5 class="mb-1">- Elisa</h5>
-
-                </div>
-            </div>
-            <div class="testimonial-item text-center">
-                <!-- <img class="img-fluid bg-light p-2 mx-auto mb-3" src="img/about page 1/Hanne/hanne1.jpeg" style="width: 210px; height: 130px;"> -->
-                <div class="testimonial-text text-center p-4" style="background-color:rgb(255, 255, 255);">
-                    <p style="font-size:medium">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. A omnis sed tempora, quo iste at adipisci! Consequuntur dicta tenetur aut quibusdam esse veniam ut eaque, omnis, asperiores reprehenderit neque possimus?
-                    <h5 class="mb-1">- Zeger</h5>
-
-                </div>
-            </div>
-            <div class="testimonial-item text-center">
-                <!-- <img class="img-fluid bg-light p-2 mx-auto mb-3" src="img/about page 1/Hanne/hanne1.jpeg" style="width: 210px; height: 130px;"> -->
-                <div class="testimonial-text text-center p-4" style="background-color:rgb(238, 237, 237);">
-                    <p style="font-size:medium">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. A omnis sed tempora, quo iste at adipisci! Consequuntur dicta tenetur aut quibusdam esse veniam ut eaque, omnis, asperiores reprehenderit neque possimus?
-                    <h5 class="mb-1">- Lucinda</h5>
-
-                </div>
-            </div>
-            
-        </div>
-    </div>
-</div>
-<!-- Testimonial End -->
-
-<!-- Agenda -->
-<div id="optionsLink"></div>
-<br><br><br><br>
-<div style="display:block; ">
-    <h1 class="display-5 mb-4"> Beschikbaarheid:</h1>
-    <h5> (<mark style="color:red;"> rood</mark> = bezet )</h5>
-    Wil je een periode inplannen? gebruik onderstaand contactformulier en geef in je bericht de gewenste periode en het aantal mensen aan. <br><br>
-    <b style="font-size: larger;">&euro;_______ Prijs per nacht = 50 euro. _______&euro;</b> <br><u>(Zelf schoon achterlaten)</u><br>
-    <br>
-    <iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=1&bgcolor=%23ffffff&ctz=Europe%2FAmsterdam&src=a2FrZWxib250aHVpc2plQGdtYWlsLmNvbQ&color=%23039BE5" style="border:solid 1px #777" width="800" height="600" frameborder="0" scrolling="no"></iframe>        <div class="container quote px-lg-0">
-            <div class="row g-0 mx-lg-0">
-                <div class="col-lg-6 ps-lg-0" style="min-height: 400px;">
-                    <div class="position-relative h-100">
-                        <img class="position-absolute img-fluid w-100" src="img/about page 1/schommel.jpg" style="padding-top:1vh; height:100%;" alt="">
-                    </div>
-                </div>
-                <div class="col-lg-6 quote-text py-5 wow fadeIn" data-wow-delay="0.5s">
-                    <div class="p-lg-5 pe-lg-0">
-                        <div class="section-title text-start">
-                            <h1 class="display-5 mb-4"> Contact: </h1>
-                        </div>
-                        <form action="https://formsubmit.co/e02a2f71528b6ec1fa6ed19ce49bc0a5" method="POST">
-                            <div class="row g-3">
-                                <input type="hidden" name="_subject" value="message from ContactForm">
-                                
-                                <div class="col-12 col-sm-6">
-                                    <!-- name input -->
-                                    <input type="text" name="name" required class="form-control border-0" placeholder="Naam" style="height: 55px;">
+    
+                    <div id="aboutLink"></div>
+                    <!-- Omgeving Start -->
+                    <div class="container-fluid bg-light overflow-hidden my-5 px-lg-0" id="about">
+                        <div class="container about px-lg-0">
+                            <div class="row g-0 mx-lg-0">
+                                <div class="col-lg-6 ps-lg-0" style="min-height: 400px;">
+                                    <div class="position-relative h-100">
+                                        <img class="position-absolute img-fluid w-100 h-100"
+                                            src="img/about page 1/bos en bevers.jpeg" style="object-fit: cover;" alt="">
+                                    </div>
                                 </div>
-                                <div class="col-12 col-sm-6">
-                                    <!-- email input -->
-                                    <input type="email" name="email" required class="form-control border-0" placeholder="Email" style="height: 55px;">
+                                <div class="    col-lg-6 about-text py-5 wow fadeIn" data-wow-delay="0.5s">
+                                    <div class="p-lg-5 pe-lg-0">
+                                        <div class="section-title text-start">
+                                            <h1 class="display-5 mb-4">Omgeving</h1>
+                                        </div>
+                                        <p class="mb-4 pb-2">
+                                            <b>&#8592; <em>"het Bos en de Bevers"</em></b><br>
+                                            Het huisje bevindt zich in een <b>uitgestrekt natuurgebied, omringd door
+                                                groen</b> met een groot aanbod wandel- en fietsroutes.<br>
+                                            Hier kun je jezelf onderdompelen in de <b>rust en stilte</b>, ver weg van de
+                                            drukte van het dagelijks leven.<br><br>
+                                            Dit natuurlijke toevluchtsoord biedt een ongekende mogelijkheid om te verkennen.
+                                            De mooie met bomen omzoomde routes leiden je over paden en door <b>prachtige en
+                                                diverse bossen</b>. Direct na buitenkomst huisje loop je het bos in.<br><br>
+                                            En dan zijn er <b>de bevers</b>, de verborgen bewoners van dit gebied. Met
+                                            geduld en een scherp oog en natuurlijk een portie geluk kun je ze observeren
+                                            terwijl ze behendig hun dammen bouwen en hun territorium bewaken.<br> De andere
+                                            bewoners van het bos zijn minstens even interessant zoals <b>het edelhert, de
+                                                vos, de buizerd, het wilde zwijn, het ree etc.</b> <br><br>
+                                            In het dorp Zutendaal bevinden zich tal van goed te bereiken winkels,
+                                            eetgelegenheid en ook een <b>zwembad</b>. Vlakbij staat de <b>uitkijktoren</b>
+                                            en is er het <b>blotevoetenpad</b> de Lieteberg. </strong>
+                                        </p>
+                                    </div>
                                 </div>
-                                <div class="col-12 col-sm-6">
-                                    <!-- tel. no. input -->
-                                    <input type="text"  name="mobile" class="form-control border-0" placeholder="Telefoonnummer (optioneel)" style="height: 55px;">
-                                </div>
-                                <div class="col-12">
-                                    <!-- message input -->
-                                    <textarea class="form-control border-0" name="message" placeholder="Bericht (bijvoorbeeld gewenste verblijfsperiode)"></textarea>
-                                </div>
-                                <div class="col-12">
-                                    <!-- submit button -->
-                                    <button class="btn btn-primary w-100 py-3" type="submit">Versturen</button>
-                                </div>
-                                    <input type="hidden" name="_next" value="https://troosbouw.com/thankyou.html">
-                                    <!-- fill in actual URL HERE -->
                             </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Contact End -->
-
-    <!-- Footer Start -->
-    <div class="container-fluid bg-dark text-light footer mt-5 pt-5 wow fadeIn" data-wow-delay="0.1s">
-        <div class="container py-5">
-            <div class="row g-5">
-                <div class="col-lg-3 col-md-6">
-                    <h4 class="text-light mb-4">Locatie:</h4>
-                    Kennepstraat 32, 3690 <br>Zutendaal, Belgium<br><br>
-
-                    Klik op de kaart voor meer info.
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d639750.915808379!2d4.019079572613809!3d51.218577999348796!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c0dd886982cab1%3A0xb2a1b5c65297ad19!2sHuisje%20Kakelbont!5e0!3m2!1sen!2snl!4v1685481220771!5m2!1sen!2snl" width=”100%” height=”100%” style="border:0;" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-
-                <!-- <div class="col-lg-3 col-md-6">
-                    <h4 class="text-light mb-4">Newsletter</h4>
-                    <p>Keep informed. 4 emails per year </p>
-                    <div class="position-relative mx-auto" style="max-width: 400px;">
-                        <input class="form-control border-0 w-100 py-3 ps-4 pe-5" type="text" placeholder="Your email">
-                        <button type="button" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">SignUp</button>
-                    </div>
-                </div> -->
-            </div>
-        </div>
-        <div class="container">
-            <div class="copyright">
-                <div class="row">
-                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                        &copy; <a class="border-bottom" href="#">Huisje Kakelbont</a>, All Right Reserved.
-                    </div>
-                    <div class="col-md-6 text-center text-md-end">
-                        <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
-                        Designed By <a class="border-bottom" href="https://htmlcodex.com">HTML Codex</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Footer End -->
-
-
-    <!-- Back to Top -->
-    <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-0 back-to-top"><i class="bi bi-arrow-up"></i></a>
-
-
-    <!-- JavaScript Libraries -->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="lib/wow/wow.min.js"></script>
-    <script src="lib/easing/easing.min.js"></script>
-    <script src="lib/waypoints/waypoints.min.js"></script>
-    <script src="lib/counterup/counterup.min.js"></script>
-    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-    <script src="lib/isotope/isotope.pkgd.min.js"></script>
-    <script src="lib/lightbox/js/lightbox.min.js"></script>
-
-    <!-- Template Javascript -->
-    <script src="js/main.js"></script>
+                        </div>
+                    </div> <!-- Omgeving End -->
     
-    <!-- Calender Javascript -->
-    <script async type="module" src="https://embed.styledcalendar.com/assets/parent-window.js"></script>
+                    <!-- Testimonial Start -->
+                    <div id="testimonialsLink"></div>
+                    <br><br>
+                    <div class="container-xxl py-5 wow fadeInUp" id="testimonials" data-wow-delay="0.1s">
+                        <div class="container" style="font-size:smaller;">
+                            <div class="section-title text-center">
+                                <!-- <h1 class="display-5 mb-5">What Clients Say About Us</h1> -->
+                            </div>
+                            <div class="owl-carousel testimonial-carousel">
+                                <div class="testimonial-item text-center">
+                                    <!-- <img class="img-fluid bg-light p-2 mx-auto mb-3" src="img/testimonial-1.jpg" style="width: 210px; height: 130px;"> -->
+                                    <div class="testimonial-text text-center p-4"
+                                        style="background-color:rgb(238, 237, 237);">
+                                        <p style="font-size:medium;">
+                                            <b>"</b> Een super mooi huisje in het midden van het bos, leuk opgeknapt en een
+                                            zee van rust. Mooie omgeving voor wandelingen en fietstochten. Zeker aan te
+                                            bevelen! <b>"</b>
+                                        </p>
+                                        <h4 class="mb-1">- Maarten</h4>
     
-    <!-- js for slideshow -->
-    <script>
-        var myIndex = 0;
-        carousel();
-        
-        function carousel() {
-          var i;
-          var x = document.getElementsByClassName("mySlides");
-          for (i = 0; i < x.length; i++) {
-            x[i].style.display = "none";  
-          }
-          myIndex++;
-          if (myIndex > x.length) {myIndex = 1}    
-          x[myIndex-1].style.display = "block";  
-          setTimeout(carousel, 6000); // Change image every 2 seconds
-        }
-        </script>
+                                    </div>
+                                </div>
+                                <div class="testimonial-item text-center">
+                                    <!-- <img class="img-fluid bg-light p-2 mx-auto mb-3" src="img/about page 1/Hanne/hanne1.jpeg" style="width: 210px; height: 130px;"> -->
+                                    <div class="testimonial-text text-center p-4"
+                                        style="background-color:rgb(255, 255, 255);">
+                                        <p style="font-size:medium">
+                                            <b>"</b>
+                                            Mooiiiiiii......
+                                            <br>
+                                            We genieten elke dag in ons stadje als we er zijn!
+                                            <br>
+                                            Schone lucht lekker eten...
+                                            <b>"</b>
+                                        <h5 class="mb-1">- Mieke</h5>
+    
+                                    </div>
+                                </div>
+                                <div class="testimonial-item text-center">
+                                    <!-- <img class="img-fluid bg-light p-2 mx-auto mb-3" src="img/about page 1/Hanne/hanne1.jpeg" style="width: 210px; height: 130px;"> -->
+                                    <div class="testimonial-text text-center p-4"
+                                        style="background-color:rgb(238, 237, 237);">
+                                        <p style="font-size:medium">
+                                            <b>"</b>
+                                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Labore, quia. Nam
+                                            obcaecati necessitatibus unde officia quod veniam deleniti animi incidunt
+                                            laboriosam voluptates suscipit exercitationem enim fugit, repellat esse libero
+                                            minima.
+                                            <b>"</b>
+                                        <h5 class="mb-1">- Elisa</h5>
+    
+                                    </div>
+                                </div>
+                                <div class="testimonial-item text-center">
+                                    <!-- <img class="img-fluid bg-light p-2 mx-auto mb-3" src="img/about page 1/Hanne/hanne1.jpeg" style="width: 210px; height: 130px;"> -->
+                                    <div class="testimonial-text text-center p-4"
+                                        style="background-color:rgb(255, 255, 255);">
+                                        <p style="font-size:medium">
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. A omnis sed tempora,
+                                            quo iste at adipisci! Consequuntur dicta tenetur aut quibusdam esse veniam ut
+                                            eaque, omnis, asperiores reprehenderit neque possimus?
+                                        <h5 class="mb-1">- Zeger</h5>
+    
+                                    </div>
+                                </div>
+                                <div class="testimonial-item text-center">
+                                    <!-- <img class="img-fluid bg-light p-2 mx-auto mb-3" src="img/about page 1/Hanne/hanne1.jpeg" style="width: 210px; height: 130px;"> -->
+                                    <div class="testimonial-text text-center p-4"
+                                        style="background-color:rgb(238, 237, 237);">
+                                        <p style="font-size:medium">
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. A omnis sed tempora,
+                                            quo iste at adipisci! Consequuntur dicta tenetur aut quibusdam esse veniam ut
+                                            eaque, omnis, asperiores reprehenderit neque possimus?
+                                        <h5 class="mb-1">- Lucinda</h5>
+    
+                                    </div>
+                                </div>
+    
+                            </div>
+                        </div>
+                    </div> <!-- Testimonial End -->
+    
 
-</body>
+                    <div class="container-xxl py-5" id="projects1" style="width:100vw;">
+                        <div class="container">
+                            <div class="container-fluid bg-light overflow-hidden my-5 px-lg-0" id="about">
+                                <div class="container about px-lg-0">
+                    
+                                    <!-- Contact Start-->
+                                    <!-- Agenda -->
+                                    <div id="optionsLink"></div>
+                                    <br><br><br><br>
+                                    <div style="display:block; ">
+                                        <h1 class="display-5 mb-4"> Beschikbaarheid:</h1>
+                                        <h5> (<mark style="color:red;"> rood</mark> = bezet )</h5>
+                                        Wil je een periode inplannen? gebruik onderstaand contactformulier en geef in je bericht de gewenste
+                                        periode en het aantal mensen aan. <br><br>
+                                        <b style="font-size: larger;">&euro;_______ Prijs per nacht = 50 euro. _______&euro;</b>
+                                        <br><u>(Zelf schoon achterlaten)</u><br>
+                                        <br>
+                                        <iframe
+                                            src="https://calendar.google.com/calendar/embed?height=600&wkst=1&bgcolor=%23ffffff&ctz=Europe%2FAmsterdam&src=a2FrZWxib250aHVpc2plQGdtYWlsLmNvbQ&color=%23039BE5"
+                                            style="border:solid 1px #777" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+                                        <div class="container quote px-lg-0">
+                                            <div class="row g-0 mx-lg-0">
+                                                <div class="col-lg-6 ps-lg-0" style="min-height: 400px;">
+                                                    <div class="position-relative h-100">
+                                                        <img class="position-absolute img-fluid w-100" src="img/about page 1/schommel.jpg"
+                                                            style="padding-top:1vh; height:100%;" alt="">
+                                                    </div>
+                                                </div>
+                    
+                                                <!-- Contact Form -->
+                                                <div class="col-lg-6 quote-text py-5 wow fadeIn" data-wow-delay="0.5s">
+                                                    <div class="p-lg-5 pe-lg-0">
+                                                        <div class="section-title text-start">
+                                                            <h1 class="display-5 mb-4"> Contact: </h1>
+                                                        </div>
+                                                        <form action="https://formsubmit.co/e02a2f71528b6ec1fa6ed19ce49bc0a5" method="POST">
+                                                            <div class="row g-3">
+                                                                <input type="hidden" name="_subject" value="message from ContactForm">
+                    
+                                                                <div class="col-12 col-sm-6">
+                                                                    <!-- name input -->
+                                                                    <input type="text" name="name" required class="form-control border-0"
+                                                                        placeholder="Naam" style="height: 55px;">
+                                                                </div>
+                                                                <div class="col-12 col-sm-6">
+                                                                    <!-- email input -->
+                                                                    <input type="email" name="email" required class="form-control border-0"
+                                                                        placeholder="Email" style="height: 55px;">
+                                                                </div>
+                                                                <div class="col-12 col-sm-6">
+                                                                    <!-- tel. no. input -->
+                                                                    <input type="text" name="mobile" class="form-control border-0"
+                                                                        placeholder="Telefoonnummer (optioneel)" style="height: 55px;">
+                                                                </div>
+                                                                <div class="col-12">
+                                                                    <!-- message input -->
+                                                                    <textarea class="form-control border-0" name="message"
+                                                                        placeholder="Bericht (bijvoorbeeld gewenste verblijfsperiode)"></textarea>
+                                                                </div>
+                                                                <div class="col-12">
+                                                                    <!-- submit button -->
+                                                                    <button class="btn btn-primary w-100 py-3"
+                                                                        type="submit">Versturen</button>
+                                                                </div>
+                                                                <input type="hidden" name="_next"
+                                                                    value="https://troosbouw.com/thankyou.html">
+                                                                <!-- fill in actual URL HERE -->
+                                                            </div>
+                                                        </form>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div> <!-- Contact End -->
 
-</html>
+                                </div>
+                            </div>
+                        </div>
+                    </div>  
+    
+                    <!-- footer start -->
+                    <!-- Google Maps -->
+                    <div class="container-fluid bg-dark text-light footer mt-5 pt-5 wow fadeIn" data-wow-delay="0.1s">
+                        <div class="container py-5">
+                            <div class="row g-5">
+                                <div class="col-lg-3 col-md-6">
+                                    <h4 class="text-light mb-4">Locatie:</h4>
+                                    Kennepstraat 32, 3690 <br>Zutendaal, Belgium<br><br>
+    
+                                    Klik op de kaart voor meer info.
+                                    <iframe
+                                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d639750.915808379!2d4.019079572613809!3d51.218577999348796!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c0dd886982cab1%3A0xb2a1b5c65297ad19!2sHuisje%20Kakelbont!5e0!3m2!1sen!2snl!4v1685481220771!5m2!1sen!2snl"
+                                        width=”100%” height=”100%” style="border:0;" loading="lazy"
+                                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                </div>
+                            </div>
+
+                            <div class="container">
+                                <div class="copyright">
+                                    <div class="row">
+                                        <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                                            &copy; <a class="border-bottom" href="#">Huisje Kakelbont</a>, All Right
+                                            Reserved.
+                                        </div>
+                                        <div class="col-md-6 text-center text-md-end">
+                                            <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
+                                            Designed By <a class="border-bottom" href="https://htmlcodex.com">HTML Codex</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>  <!-- Footer End -->
+    
+    
+                        <!-- Back to Top -->
+                        <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-0 back-to-top"><i
+                                class="bi bi-arrow-up"></i></a>
+    
+    
+                        <!-- JavaScript Libraries -->
+                        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+                        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+                        <script src="lib/wow/wow.min.js"></script>
+                        <script src="lib/easing/easing.min.js"></script>
+                        <script src="lib/waypoints/waypoints.min.js"></script>
+                        <script src="lib/counterup/counterup.min.js"></script>
+                        <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+                        <script src="lib/isotope/isotope.pkgd.min.js"></script>
+                        <script src="lib/lightbox/js/lightbox.min.js"></script>
+    
+                        <!-- Template Javascript -->
+                        <script src="js/main.js"></script>
+    
+                        <!-- Calender Javascript -->
+                        <script async type="module" src="https://embed.styledcalendar.com/assets/parent-window.js"></script>
+    
+                        <!-- js for slideshow -->
+                        <script>
+                            var myIndex = 0;
+                            carousel();
+
+                            function carousel() {
+                                var i;
+                                var x = document.getElementsByClassName("mySlides");
+                                for (i = 0; i < x.length; i++) {
+                                    x[i].style.display = "none";
+                                }
+                                myIndex++;
+                                if (myIndex > x.length) { myIndex = 1 }
+                                x[myIndex - 1].style.display = "block";
+                                setTimeout(carousel, 6000); // Change image every 2 seconds
+                            }
+                        </script>
+    
+                        </body>
+    
+                        </html>
