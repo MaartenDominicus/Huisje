@@ -127,6 +127,9 @@
             .topText{
                 font-size:xx-large;
             }
+            #agendaIframe{
+                height:90vh;
+            }
             }
 
             @media screen and (min-width: 1025px)and (max-width: 1800px) {
@@ -135,6 +138,9 @@
             }
             .topText{
                 font-size:x-large;
+            }
+            #agendaIframe{
+                height: 90vh;
             }
             }
 
@@ -145,6 +151,9 @@
             .topText{
                 font-size:large;
             }
+            #agendaIframe{
+                height: 90vh;
+            }
             }
 
             @media screen and (min-width: 50px) and (max-width: 500px) {
@@ -153,6 +162,9 @@
             }
             .topText{
                 font-size:medium;
+            }
+            #agendaIframe{
+                height: 50vh;
             }
             }
 
@@ -250,7 +262,7 @@
                 <a href="#aboutLink" class="nav-item nav-link">Omgeving</a>
 
                 <a href="#testimonialsLink" class="nav-item nav-link">Klant ervaringen</a>
-                <a href="#optionsLink" class="nav-item nav-link">Beschikbaarheid</a>
+                <a href="#agendaLink" class="nav-item nav-link">Beschikbaarheid</a>
 
                 <!-- <div class="nav-item dropdown">
                     <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
@@ -296,7 +308,7 @@
 
 <!-- centered button -->
 <div class="infoBtnContainer">
-    <div class="infoBtn">
+    <div class="infoBtn" style="min-width: 400px;">
         <!-- <a href="#projects1" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block" style="display:inline;">Meer info<i class="fa fa-arrow-right ms-3"></i></a> -->
         <a href="#projects" class="centered-button" style="color:white;">Meer informatie <i class="fa fa-arrow-right ms-3"></i></a>
 </body>
@@ -340,7 +352,7 @@
         </div>
     </div> <!-- About End -->
 
-    <div id="projects"></div>
+    <div id="projects1"></div>
         <span>
             <h1 style="padding-left:10px; padding-top:15px; color: rgb(85, 1, 1);">Fotos</h1>
         </span>
@@ -483,18 +495,12 @@
                             </div>
                         </div>
                     </div> <!-- Testimonial End -->
-    
-
-                    <div class="container-xxl py-5" id="projects1" style="width:100vw;">
-                        <div class="container">
-                            <div class="container-fluid bg-light overflow-hidden my-5 px-lg-0" id="about">
-                                <div class="container about px-lg-0">
                     
                                     <!-- Contact Start-->
                                     <!-- Agenda -->
-                                    <div id="optionsLink"></div>
+                                    <div id="agendaLink"></div>
                                     <br><br><br><br>
-                                    <div style="display:block; ">
+                                    <div style="display:block; margin-left:5%; ">
                                         <h1 class="display-5 mb-4"> Beschikbaarheid:</h1>
                                         <h5> (<mark style="color:red;"> rood</mark> = bezet )</h5>
                                         Wil je een periode inplannen? gebruik onderstaand contactformulier en geef in je bericht de gewenste
@@ -503,8 +509,8 @@
                                         <br><u>(Zelf schoon achterlaten)</u><br>
                                         <br>
                                         <iframe
-                                            src="https://calendar.google.com/calendar/embed?height=600&wkst=1&bgcolor=%23ffffff&ctz=Europe%2FAmsterdam&src=a2FrZWxib250aHVpc2plQGdtYWlsLmNvbQ&color=%23ffff00"
-                                            style="border:solid 1px #777" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+                                            id="agendaIframe" src="https://calendar.google.com/calendar/embed?height=600&wkst=1&bgcolor=%23ffffff&ctz=Europe%2FAmsterdam&src=a2FrZWxib250aHVpc2plQGdtYWlsLmNvbQ&color=%23ffff00"
+                                            style="border:solid 1px #777" width="90%" height="500vh" frameborder="0" scrolling="no"></iframe>
                                         <div class="container quote px-lg-0">
                                             <div class="row g-0 mx-lg-0">
                                                 <div class="col-lg-6 ps-lg-0" style="min-height: 400px;">
@@ -554,10 +560,7 @@
                                                                 <!-- fill in actual URL HERE -->
                                                             </div>
                                                         </form>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
+
                                     </div> <!-- Contact End -->
 
                                 </div>
